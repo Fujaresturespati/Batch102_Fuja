@@ -1,0 +1,64 @@
+﻿@model IEnumerable<waMVCDay12.Models.BUKU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddBuku")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BUKU_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KODE_JENIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TAHUN_PENERBIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KODE_BUKU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMA_BUKU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JML_HAL_BUKU)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BUKU_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KODE_JENIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TAHUN_PENERBIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KODE_BUKU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMA_BUKU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JML_HAL_BUKU)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

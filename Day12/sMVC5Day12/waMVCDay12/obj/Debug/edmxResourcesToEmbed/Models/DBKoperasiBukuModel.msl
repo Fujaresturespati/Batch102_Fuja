@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBKoperasiBukuModelStoreContainer" CdmEntityContainer="DBKoperasiBukuEntities">
+    <EntitySetMapping Name="BUKU">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.BUKU">
+        <MappingFragment StoreEntitySet="BUKU">
+          <ScalarProperty Name="BUKU_ID" ColumnName="BUKU_ID" />
+          <ScalarProperty Name="KODE_JENIS" ColumnName="KODE_JENIS" />
+          <ScalarProperty Name="TAHUN_PENERBIT" ColumnName="TAHUN_PENERBIT" />
+          <ScalarProperty Name="KODE_BUKU" ColumnName="KODE_BUKU" />
+          <ScalarProperty Name="NAMA_BUKU" ColumnName="NAMA_BUKU" />
+          <ScalarProperty Name="JML_HAL_BUKU" ColumnName="JML_HAL_BUKU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAJI">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.GAJI">
+        <MappingFragment StoreEntitySet="GAJI">
+          <ScalarProperty Name="GAJI1" ColumnName="GAJI" />
+          <ScalarProperty Name="NAMA" ColumnName="NAMA" />
+          <ScalarProperty Name="KODE_PENGARANG" ColumnName="KODE_PENGARANG" />
+          <ScalarProperty Name="GAJI_ID" ColumnName="GAJI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KODE_JENIS">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.KODE_JENIS">
+        <MappingFragment StoreEntitySet="KODE_JENIS">
+          <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+          <ScalarProperty Name="LAMA_PEMINJAMAN" ColumnName="LAMA_PEMINJAMAN" />
+          <ScalarProperty Name="KODE_JENIS1" ColumnName="KODE_JENIS" />
+          <ScalarProperty Name="KODE_JENIS_ID" ColumnName="KODE_JENIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PENERBIT">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.PENERBIT">
+        <MappingFragment StoreEntitySet="PENERBIT">
+          <ScalarProperty Name="ALAMAT_PENERBIT" ColumnName="ALAMAT_PENERBIT" />
+          <ScalarProperty Name="NAMA_PENERBIT" ColumnName="NAMA_PENERBIT" />
+          <ScalarProperty Name="KODE_PENERBIT" ColumnName="KODE_PENERBIT" />
+          <ScalarProperty Name="PENERBIT_ID" ColumnName="PENERBIT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PENGARANG">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.PENGARANG">
+        <MappingFragment StoreEntitySet="PENGARANG">
+          <ScalarProperty Name="KELAMIN" ColumnName="KELAMIN" />
+          <ScalarProperty Name="KOTA" ColumnName="KOTA" />
+          <ScalarProperty Name="ALAMAT" ColumnName="ALAMAT" />
+          <ScalarProperty Name="NAMA" ColumnName="NAMA" />
+          <ScalarProperty Name="KODE_PENGARANG" ColumnName="KODE_PENGARANG" />
+          <ScalarProperty Name="PENGARANG_ID" ColumnName="PENGARANG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEMINJAMAN">
+      <EntityTypeMapping TypeName="DBKoperasiBukuModel.PEMINJAMAN">
+        <MappingFragment StoreEntitySet="PEMINJAMAN">
+          <ScalarProperty Name="KODE_BUKU" ColumnName="KODE_BUKU" />
+          <ScalarProperty Name="TANGGAL_PINJAM" ColumnName="TANGGAL_PINJAM" />
+          <ScalarProperty Name="KODE_PEMINJAMAN" ColumnName="KODE_PEMINJAMAN" />
+          <ScalarProperty Name="PEMINJAMAN_ID" ColumnName="PEMINJAMAN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBKoperasiBukuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BUKU">
+    <Key>
+      <PropertyRef Name="BUKU_ID" />
+    </Key>
+    <Property Name="BUKU_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_JENIS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TAHUN_PENERBIT" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="KODE_BUKU" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAMA_BUKU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JML_HAL_BUKU" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBKoperasiBukuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BUKU" EntityType="Self.BUKU" />
+    <EntitySet Name="GAJI" EntityType="DBKoperasiBukuModel.GAJI" />
+    <EntitySet Name="KODE_JENIS" EntityType="DBKoperasiBukuModel.KODE_JENIS" />
+    <EntitySet Name="PENERBIT" EntityType="DBKoperasiBukuModel.PENERBIT" />
+    <EntitySet Name="PENGARANG" EntityType="DBKoperasiBukuModel.PENGARANG" />
+    <EntitySet Name="PEMINJAMAN" EntityType="DBKoperasiBukuModel.PEMINJAMAN" />
+  </EntityContainer>
+  <EntityType Name="GAJI">
+    <Key>
+      <PropertyRef Name="GAJI_ID" />
+    </Key>
+    <Property Name="GAJI_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_PENGARANG" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="NAMA" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="GAJI1" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="KODE_JENIS">
+    <Key>
+      <PropertyRef Name="KODE_JENIS_ID" />
+    </Key>
+    <Property Name="KODE_JENIS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_JENIS1" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="LAMA_PEMINJAMAN" Type="Int32" Nullable="false" />
+    <Property Name="KETERANGAN" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PENERBIT">
+    <Key>
+      <PropertyRef Name="PENERBIT_ID" />
+    </Key>
+    <Property Name="PENERBIT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_PENERBIT" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NAMA_PENERBIT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT_PENERBIT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PENGARANG">
+    <Key>
+      <PropertyRef Name="PENGARANG_ID" />
+    </Key>
+    <Property Name="PENGARANG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_PENGARANG" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="NAMA" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="KOTA" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KELAMIN" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PEMINJAMAN">
+    <Key>
+      <PropertyRef Name="PEMINJAMAN_ID" />
+    </Key>
+    <Property Name="PEMINJAMAN_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KODE_PEMINJAMAN" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TANGGAL_PINJAM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="KODE_BUKU" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

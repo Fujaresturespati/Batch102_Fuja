@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBKoperasiBukuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BUKU">
+    <Key>
+      <PropertyRef Name="BUKU_ID" />
+    </Key>
+    <Property Name="BUKU_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_JENIS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="TAHUN_PENERBIT" Type="date" Nullable="false" />
+    <Property Name="KODE_BUKU" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NAMA_BUKU" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="JML_HAL_BUKU" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GAJI">
+    <Key>
+      <PropertyRef Name="GAJI_ID" />
+    </Key>
+    <Property Name="GAJI_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_PENGARANG" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="NAMA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="GAJI" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KODE_JENIS">
+    <Key>
+      <PropertyRef Name="KODE_JENIS_ID" />
+    </Key>
+    <Property Name="KODE_JENIS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_JENIS" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="LAMA_PEMINJAMAN" Type="int" Nullable="false" />
+    <Property Name="KETERANGAN" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PENERBIT">
+    <Key>
+      <PropertyRef Name="PENERBIT_ID" />
+    </Key>
+    <Property Name="PENERBIT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_PENERBIT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NAMA_PENERBIT" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ALAMAT_PENERBIT" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PENGARANG">
+    <Key>
+      <PropertyRef Name="PENGARANG_ID" />
+    </Key>
+    <Property Name="PENGARANG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_PENGARANG" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="NAMA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ALAMAT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="KOTA" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="KELAMIN" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PEMINJAMAN">
+    <Key>
+      <PropertyRef Name="PEMINJAMAN_ID" />
+    </Key>
+    <Property Name="PEMINJAMAN_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KODE_PEMINJAMAN" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TANGGAL_PINJAM" Type="date" Nullable="false" />
+    <Property Name="KODE_BUKU" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBKoperasiBukuModelStoreContainer">
+    <EntitySet Name="BUKU" EntityType="Self.BUKU" Schema="MST" store:Type="Tables" />
+    <EntitySet Name="GAJI" EntityType="Self.GAJI" Schema="MST" store:Type="Tables" />
+    <EntitySet Name="KODE_JENIS" EntityType="Self.KODE_JENIS" Schema="MST" store:Type="Tables" />
+    <EntitySet Name="PENERBIT" EntityType="Self.PENERBIT" Schema="MST" store:Type="Tables" />
+    <EntitySet Name="PENGARANG" EntityType="Self.PENGARANG" Schema="MST" store:Type="Tables" />
+    <EntitySet Name="PEMINJAMAN" EntityType="Self.PEMINJAMAN" Schema="TRX" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

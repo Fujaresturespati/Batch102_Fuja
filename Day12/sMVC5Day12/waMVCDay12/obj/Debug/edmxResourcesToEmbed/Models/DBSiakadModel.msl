@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSiakadModel1StoreContainer" CdmEntityContainer="DBSiakadEntities1">
+    <EntitySetMapping Name="FAKULTAS">
+      <EntityTypeMapping TypeName="DBSiakadModel1.FAKULTAS">
+        <MappingFragment StoreEntitySet="FAKULTAS">
+          <ScalarProperty Name="FAKULTAS_ID" ColumnName="FAKULTAS_ID" />
+          <ScalarProperty Name="KODE_FAKULTAS" ColumnName="KODE_FAKULTAS" />
+          <ScalarProperty Name="NAMA_FAKULTAS" ColumnName="NAMA_FAKULTAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

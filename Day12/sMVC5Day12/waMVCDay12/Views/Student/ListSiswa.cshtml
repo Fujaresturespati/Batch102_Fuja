@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "ListSiswa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListSiswa</h2>
+<table>
+    <thead>
+        <th>Nama Siswa</th>
+        <th>Umur Siswa</th>
+        <th>Kelamin Siswa</th>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.ListSiswa)
+        {
+            <tr>
+                <td>@item.Student_Name</td>
+                <td></td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <table>
+        <thead>
+        <th>Nama Siswa</th>
+        <th>Umur Siswa</th>
+        <th>Kelamin Siswa</th>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewData["ListStudent"] as List<waMVCDay12.Models.Student>)
+            {
+                <tr>
+                    <td>@item.Student_Name</td>
+                    <td>@item.Ages</td>
+                    <td>@item.Gender</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</p>
+

@@ -1,0 +1,43 @@
+﻿@model waMVCDay12.Models.FAKULTAS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FAKULTAS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FAKULTAS_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAKULTAS_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KODE_FAKULTAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KODE_FAKULTAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMA_FAKULTAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMA_FAKULTAS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.FAKULTAS_ID  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
